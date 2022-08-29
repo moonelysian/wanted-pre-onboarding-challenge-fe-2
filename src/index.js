@@ -1,51 +1,61 @@
 /**
- * Represents a book.
+ * Represents a todo
  * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @param {string} id - 아이디.
+ * @param {string} content - 내용.
+ * @param {boolean} isCompleted - 완료여부.
+ * @param {string} category - 카테고리.
+ * @param {string[]=} tags - 태그들.
  */
-function Book(title, author) {}
+function Todo(id, content, isCompleted, category, tags) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * Creat a todo
+ * @param {string} content - 내용.
+ * @param {string} category - 카테고리.
+ * @param {string[]=} tags- 태그들.
+ * @param {boolean=} [isCompleted=false] - 완료여부.
+ * @returns {Todo} - 생성된 todo를 반환.
  */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
+Todo.prototype.createTodo = function (content, isCompleted, category, tags) {};
 
 /**
- * Generic dairy product.
- * @constructor
+ * Read all todos
+ * @returns {Todo[]} - 생성된 전체 todo를 반환.
  */
-function DairyProduct() {}
+Todo.prototype.indexAllTodos = function () {};
+/**
+ * Read specific todo
+ * @param {string} id - 아이디.
+ * @returns {Todo[]} - 존재하는 모든 todo를 반환.
+ */
+Todo.prototype.indexTodo = function (id) {};
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * Update specific todo
+ * @param {string} id - 아이디.
+ * @param {string} content - 내용.
+ * @param {string} category - 카테고리.
+ * @param {boolean} isCompleted - 완료여부.
+ * @param {string[]} tags- 태그들.
+ * @returns {Todo} - 생성된 todo를 반환.
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+Todo.prototype.updateTodo = function (
+  id,
+  content,
+  category,
+  isCompleted,
+  tags
+) {};
 
 /**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ * Delete all todos
+ * @returns
  */
-function Milk() {}
-
+Todo.prototype.deleteAllTodos = function () {};
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * Delete specific todo
+ * @param {string} id - 아이디.
+ * @returns
  */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+Todo.prototype.deleteTodo = function (id) {};
