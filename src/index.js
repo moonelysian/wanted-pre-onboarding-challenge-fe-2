@@ -47,15 +47,36 @@ Todo.prototype.updateTodo = function (
   isCompleted,
   tags
 ) {};
+/**
+ * Update specific todo's tag
+ * @param {number} id - todo 아이디.
+ * @param {string} tag - 태그
+ * @return {boolean} - 성공여부
+ */
+Todo.prototype.updateTag = function (id, tag) {};
 
 /**
  * Delete all todos
- * @returns
+ * @returns {boolean} - 성공여부
  */
 Todo.prototype.deleteAllTodos = function () {};
 /**
  * Delete specific todo
  * @param {string} id - 아이디.
- * @returns
+ * @returns {boolean} - 성공여부
  */
 Todo.prototype.deleteTodo = function (id) {};
+/**
+ * Delete specific todo's tag
+ * @param {string} id - todo 아이디.
+ * @param {string} tag - 태그
+ * @returns {boolean} - 성공여부
+ */
+Todo.prototype.deleteTag = function (id, tag) {};
+/**
+ * Delete specific todo's all tags
+ * @param {string} id - todo 아이디.
+ * @param {string[]} tags - 태그
+ * @returns {boolean} - 성공여부
+ */
+Todo.prototype.deleteAllTags = function (id, tags) {};
