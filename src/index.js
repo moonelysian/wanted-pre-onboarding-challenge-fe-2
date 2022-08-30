@@ -5,7 +5,7 @@
  * @param {string} content - 내용.
  * @param {boolean} isCompleted - 완료여부.
  * @param {string} category - 카테고리.
- * @param {string[]=} tags - 태그들.
+ * @param {Array.<string>=} [tags=[]] - 태그들.
  */
 function Todo(id, content, isCompleted, category, tags) {}
 
@@ -13,7 +13,7 @@ function Todo(id, content, isCompleted, category, tags) {}
  * Creat a todo
  * @param {string} content - 내용.
  * @param {string} category - 카테고리.
- * @param {string[]=} tags- 태그들.
+ * @param {Array.<string>=} [tags=[]] - 태그들.
  * @param {boolean=} [isCompleted=false] - 완료여부.
  * @returns {Todo} - 생성된 todo를 반환.
  */
