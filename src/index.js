@@ -17,7 +17,7 @@ function Todo(id, content, isCompleted, category, tags) {}
  * @param {boolean=} [isCompleted=false] - 완료여부.
  * @returns {Todo} - 생성된 todo를 반환.
  */
-Todo.prototype.createTodo = function (content, isCompleted, category, tags) {};
+Todo.prototype.createTodo = function ({content, isCompleted, category, tags}) {};
 
 /**
  * Read all todos
@@ -42,10 +42,11 @@ Todo.prototype.indexTodo = function (id) {};
  */
 Todo.prototype.updateTodo = function (
   id,
-  content,
-  category,
-  isCompleted,
-  tags
+   {content,
+    category,
+    isCompleted,
+    tags
+   }
 ) {};
 /**
  * Update specific todo's tag
